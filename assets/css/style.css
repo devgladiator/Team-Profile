@@ -20,7 +20,7 @@ section:before{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#f00, #f0f);
+    background: #E02401;
     clip-path: circle(30% at right 70%);
 }
 
@@ -31,7 +31,7 @@ section:after{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
+    background: #F78812;
     clip-path: circle(20% at 10% 10%);
 }
 .container{
@@ -55,6 +55,9 @@ section:after{
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
+    transform: scale(1);
+    border: 2px solid transparent;
+    transition: 0.5s;
 }
 .container .card .content{
     position: relative;
@@ -65,6 +68,11 @@ section:after{
     opacity: 0.5;
     transition: 0.5s;
 }
+.container .card:hover{
+    transform: scale(1.2);
+    border: 2px solid #fff;
+}
+
 .container .card:hover .content{
     opacity: 1;
     transform: translateY(-20px);
@@ -111,10 +119,12 @@ section:after{
     list-style: none;
     margin: 0 10px;
     transform: translateY(40px);
+    opacity: 0.5;
     transition: 0.5s;
 }
 .container .card:hover .social-icon li{
     transform: translateY(0px);
+    opacity: 1;
     
 }
 .container .card .social-icon li a{
